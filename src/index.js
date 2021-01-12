@@ -9,31 +9,52 @@ const lakeList=[
   "Cascade lake"
 ];
 
-function Hello({ lake }){
+// function Hello({ season }){
+//   return(
+//     <div>
+//       <h1>Hello from functional component...</h1>
+//      <ul>
+//       {lake.map(
+//         item => (<li>{item}</li>)
+//       )}
+//      </ul>
+//     </div>
+//   );
+// }
+
+function Hello({ season }){
   return(
     <div>
-      <h1>Hello from functional component...</h1>
-     <ul>
-      {lake.map(
-        item => (<li>{item}</li>)
-      )}
-     </ul>
+      {(season == "summer") ? <Summer /> : <Winter />}
     </div>
   );
 }
-// let city={
-//   name:"Pune",
-//   state:"Maharashtra"
-// };
+
+function  Winter() {
+  return(
+    <div>
+      <h2>Welcome to winter...</h2>
+    </div>
+  );
+  
+}
+
+function Summer() {
+  return(
+    <div>
+      <h2> Welcomw to summer...</h2>
+    </div>
+  );
+  
+}
+
 
 ReactDOM.render(
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>,
 
-<Hello lake={lakeList}/>,
-  // React.createElement("h1", {style:{color:"blue"}},"Hello"),
-  // <h2>{city.name} is in {city.state}   !!</h2>,
+<Hello season="winter"/>,
   document.getElementById('root')
 );
 
