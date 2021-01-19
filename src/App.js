@@ -1,13 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import PostList from "./Components/PostList"; 
+import StyleSheet from "./Components/StyleSheet"; 
 import {Routes , Route} from "react-router-dom";
 import{Home,About,Events,Contacts,History} from "./Pages"
+import Inline from './Components/Inline';
+import style from './appStyles.module.css';
+
 
 function App() {
   return (
     <div className="App">
-      <PostList />
+      <h1 className={style.success}>Apply css using module file...</h1>
+        {/* <PostList /> */}
+        {/* <StyleSheet /> */}
+        <Inline />
       <Routes>
       <Route path="/" element={<Home />} />
 
