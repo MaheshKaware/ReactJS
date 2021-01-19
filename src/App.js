@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import PostList from "./Components/PostList"; 
 import {Routes , Route} from "react-router-dom";
 import{Home,About,Events,Contacts,History} from "./Pages"
 
 function App() {
   return (
     <div className="App">
+      <PostList />
       <Routes>
       <Route path="/" element={<Home />} />
 
