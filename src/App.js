@@ -6,15 +6,18 @@ import {Routes , Route} from "react-router-dom";
 import{Home,About,Events,Contacts,History} from "./Pages"
 import Inline from './Components/Inline';
 import style from './appStyles.module.css';
+import LifeCycleA from './Components/LifeCycleA';
+import Form from './Components/Form';
 
 
 function App() {
   return (
     <div className="App">
-      <h1 className={style.success}>Apply css using module file...</h1>
+      {/* <h1 className={style.success}>Apply css using module file...</h1> */}
         {/* <PostList /> */}
         {/* <StyleSheet /> */}
-        <Inline />
+        {/* <Inline /> */}
+        <Form/>
       <Routes>
       <Route path="/" element={<Home />} />
 
